@@ -1,0 +1,13 @@
+.drop-shadow {
+    -webkit-box-shadow: 0px 0px 33px -10px rgba(71, 114, 254, 0.3);
+    -moz-box-shadow: 0px 0px 33px -10px rgba(71, 114, 254, 0.3);
+    box-shadow:  0px 0px 33px -10px rgba(71, 114, 254, 0.3);;
+}
+
+.card {
+    border: none;
+}
+
+.app {
+    margin-top: 30px;
+}

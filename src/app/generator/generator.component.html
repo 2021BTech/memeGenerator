@@ -1,0 +1,54 @@
+<div class="app p-4">
+    <div class="container">
+        <div class="row">
+            <!-- first card -->
+            <div class="col-md-6">
+                <div class="card drop-shadow">
+                    <div class="card-body">
+                        <form action="">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label for="image">Select an Image</label>
+                                    <input type="file" class="form-control" name="image" accept="image/*" (change)="preview($event)">
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="topText">Top Text</label>
+                                    <input type="text" class="form-control" name="topText" [(ngModel)]="topText" (keyup)="drawText()">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bottomText">Bottom Text</label>
+                                    <input type="text" class="form-control" name="bottomText" [(ngModel)]="bottomText" (keyup)="drawText()">
+                                </div>
+                            </div>
+
+                            <div class="row py-2">
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="">Text Color</label>
+                                        <color-chrome (onChangeComplete)="canvasTextColor($event)"></color-chrome>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="">Background Color</label>
+                                        <color-chrome (onChangeComplete)="canvasBgColor($event)"></color-chrome>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline-primary btn-block mt-2" style="width: 90%;" (click)="downloadImg()"> Download </button>
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second card -->
+            <div class="col-md-6">
+               <canvas class="drop-shadow" #memeCanvas width="700" height="550" style="background-color: #f9f9fd;">
+               </canvas>
+            </div>
+        </div>
+    </div>
+</div>
